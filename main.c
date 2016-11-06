@@ -30,6 +30,44 @@ int main()
     imprime_double(arr2, 20);
 
     // Se libera la memoria que ocupan los arreglos ordenados
+    free(arr1);
+    free(arr2);
 
     return 0;
+}
+
+// Función que compara dos enteros.
+int cmp_int(const void * a, const void * b){
+    int value_a = *((int *)a);
+    int value_b = *((int *)b);
+
+    if(value_a < value_b) return -1;
+    else if(value_a > value_b) return 1;
+    else return 0;
+}
+
+// Función que compara dos dobles.
+int cmp_double(const void * a, const void * b){
+    double value_a= *((double *)a); 
+    double value_b= *((double *)b);
+    
+    if(value_a < value_b) return -1;
+    else if(value_a > value_b) return 1;
+    else return 0;
+}
+
+// función que imprime una lista de enteros de tamaño num
+void imprime_int(int * arreglo, size_t num){
+    for(int i= 0; i < num; i++){
+        printf("%d ", *(arreglo + i));
+    }
+    printf("\n");
+}
+
+// función que imprime una lista de doubles de tamaño num
+void imprime_double(double * arreglo, size_t num){
+    for(int i= 0; i < num; i++){
+        printf("%.4f ", *(arreglo + i));
+    }
+    printf("\n");
 }
