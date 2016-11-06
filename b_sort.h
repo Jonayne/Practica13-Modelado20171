@@ -3,9 +3,6 @@
 
 #include <stdio.h>
 
-/*No es necesario ya que stdio.h lo trae*/
-#include <stddef.h>
-
 /*  bsort: ordena un arreglo usando el algoritmo bubble sort
     base: es un apuntador a un arreglo a ordenar
     num: es el número de elementos en el arreglo
